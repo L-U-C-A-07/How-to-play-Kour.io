@@ -1,0 +1,132 @@
+/* =============== general =============== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+canvas {
+    display: block;
+}
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: var(--C1);
+    display: flex;
+    flex-direction: column;
+    font-family: montserrat;
+    overflow-x: hidden;
+}
+:root {
+    --C1: rgb(37, 37, 37);
+    --C2: #101010;
+    --C3: #dfdfdf;
+}
+.Pointer {
+    cursor: pointer;
+}
+/* =============== header =============== */
+#header {
+    background-color: var(--C1);
+    width: 100%;
+    height: 70px;
+    border-bottom: 2px solid var(--C2);
+    position: fixed;
+    z-index: 1;
+}
+#innerHeader {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    padding: 5px;
+}
+#header img {
+    height: 100%;
+}
+.navigation {
+    float: right;
+    display: flex;
+    height: 60px;
+    margin: 0;
+    align-items: center;
+    gap: 25px;
+    color: var(--C3);
+}
+.navigation a {
+    font-size: 16px;
+}
+.navigation a:last-child {
+    padding-right: 10px;
+}
+.navigation a li {
+    display: table-cell;
+    white-space: nowrap;
+    border-bottom: 2px #10101000 solid;
+    transition: .5s;
+    height: 22px;
+    vertical-align: middle;
+}
+.navigation a li:hover {
+    border-color: var(--C2);
+}
+.navigation a li.Active {
+    border-color: var(--C2);
+}
+/* =============== footer =============== */
+#footer {
+    background-color: var(--C1);
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid var(--C2);
+}
+#LogoAndCopyright {
+    height: calc(100% - 10px);
+    padding: 5px;
+    width: 210px;
+    float: left;
+}
+#LogoAndCopyright img {
+    height: 65%;
+}
+#LogoAndCopyright p {
+    margin-top: 0;
+    font-weight: 500;
+    color: var(--C3);
+}
+/* =============== content =============== */
+#MainContainer {
+    width: 100%;
+    min-height: calc(100vh - 174px);
+    margin-top: 72px;
+}
+.content {
+    padding: 20px;
+    width: calc(100% - 63px);
+    margin: 10px;
+    border: solid 2px var(--C2);
+    border-radius: 7px;
+    color: var(--C3);
+}
+#Welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-image: url("/Images/background-og.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+#title {
+    position: absolute;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    white-space: nowrap;
+}
+#title h1, h2 {
+    margin: -10px;
+}
+#title img {
+    min-width: 150px;
+    max-width: 200px;
+    width: 20vw;
+}
