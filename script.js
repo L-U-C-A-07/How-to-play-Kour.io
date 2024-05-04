@@ -4,5 +4,4 @@ let ChangeIcon = function(icon) {
     icon.classList.toggle("fa-xmark");
 }
 
-console.log(navigator.userAgent);
-document.title = navigator.userAgent;
+document.getElementById("title").innerHTML = navigator.userAgent;
