@@ -130,36 +130,6 @@ body {
         display: flex;
     }
 }
-#WDownload {
-    float: right;
-    margin: 0px 20px;
-    height: calc(var(--Header) - 10px);
-    display: flex;
-    align-items: center;
-    margin-top: calc(var(--Footer) - 60px);
-}
-#WDownload button {
-    height: 30px;
-    background-color: rgb(15, 115, 230);
-    color: white;
-    border: solid 2px rgb(10, 67, 133);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    transition: .2s;
-}
-#WDownload button img {
-    height: 100%;
-    margin-right: 5px;
-}
-#WDownload button:hover {
-    box-shadow: 2px 2px rgb(10, 67, 133);
-    transform: translate(-2px, -2px);
-}
-#WDownload button:active {
-    box-shadow: none;
-    transform: translate(0);
-}
 /* =============== content =============== */
 #MainContainer {
     width: 100%;
@@ -193,6 +163,7 @@ body {
     align-items: center;
     flex-direction: column;
     white-space: nowrap;
+    text-shadow: 2px 3px 5px rgba(0, 1, 41, 0.959);
 }
 #title h1, h2 {
     margin: -10px;
@@ -212,14 +183,111 @@ body {
 #LogoAndCopyright {
     height: calc(100% - 10px);
     padding: 5px;
-    width: 210px;
+    width: 150px;
     float: left;
 }
 #LogoAndCopyright img {
     height: 65%;
 }
 #LogoAndCopyright p {
-    margin-top: 0;
+    font-size: 13px;
+    margin-top: 5px;
     font-weight: 500;
     color: var(--C3);
+}
+.WDownload {
+    float: right;
+    margin: 0px 20px;
+    height: calc(var(--Header) - 10px);
+    display: flex;
+    align-items: center;
+    margin-top: calc(var(--Footer) - 60px);
+}
+.WDownload button {
+    height: 30px;
+    background-color: rgb(15, 115, 230);
+    color: white;
+    border: solid 2px rgb(10, 67, 133);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.WDownload button img {
+    height: 100%;
+    margin-right: 5px;
+}
+.WDownload button:hover {
+    box-shadow: 2px 2px rgb(10, 67, 133);
+    transform: translate(-2px, -2px);
+}
+.WDownload button:active {
+    box-shadow: none;
+    transform: translate(0);
+}
+.BottomContacts {
+    float: left;
+    height: calc(100% - 20px);
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.contact {
+    font-size: 25px;
+    color: var(--C3);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px 9px;
+    transition: .3s;
+}
+.contact:hover {
+    transform: scale(1.2);
+}
+.Download-Contacts {
+    display: none;
+    float: right;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+@media (max-width: 538px) {
+    .footerRemove {
+        display: none;
+    }
+    .Download-Contacts {
+        display: flex;
+    }
+    .BottomContacts {
+        grid-template-columns: auto auto auto auto auto;
+        height: auto;
+        margin: 0;
+    }
+    .contact {
+        font-size: 20px;
+        margin: 0 6px;
+    }
+    .WDownload {
+        margin: 0;
+        margin-top: 5px;
+        height: auto;
+        width: 100%;
+    }
+    .WDownload button {
+        width: 100%;
+    }
+}
+@media (max-width: 382px) {
+    .contact {
+        font-size: 17px;
+        margin: 0 4px;
+    }
 }
