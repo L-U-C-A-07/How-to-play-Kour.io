@@ -1,5 +1,5 @@
 /* =============== general =============== */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 canvas {
     display: block;
 }
@@ -10,13 +10,15 @@ body {
     background-color: var(--C1);
     display: flex;
     flex-direction: column;
-    font-family: montserrat;
+    font-family: roboto;
     overflow-x: hidden;
 }
 :root {
-    --C1: rgb(37, 37, 37);
+    --C1: #252525;
     --C2: #101010;
     --C3: #dfdfdf;
+    --Header: 70px;
+    --Footer: 100px;
 }
 .Pointer {
     cursor: pointer;
@@ -25,7 +27,7 @@ body {
 #header {
     background-color: var(--C1);
     width: 100%;
-    height: 70px;
+    height: var(--Header);
     border-bottom: 2px solid var(--C2);
     position: fixed;
     z-index: 1;
@@ -36,6 +38,7 @@ body {
     padding: 5px;
 }
 #header img {
+    float: left;
     height: 100%;
 }
 .navigation {
@@ -45,10 +48,11 @@ body {
     margin: 0;
     align-items: center;
     gap: 25px;
-    color: var(--C3);
 }
 .navigation a {
     font-size: 16px;
+    color: var(--C3);
+    text-decoration: none;
 }
 .navigation a:last-child {
     padding-right: 10px;
@@ -61,38 +65,106 @@ body {
     height: 22px;
     vertical-align: middle;
 }
-.navigation a li:hover {
+.navigation a li:hover, #NavigationMenu a li:hover {
     border-color: var(--C2);
 }
-.navigation a li.Active {
+.navigation a li.Active, #NavigationMenu a li.Active {
     border-color: var(--C2);
 }
-/* =============== footer =============== */
-#footer {
-    background-color: var(--C1);
-    width: 100%;
-    height: 100px;
-    border-top: 2px solid var(--C2);
+#MenuBtn {
+    width: 124.33px;
+    float: right;
+    height: 190px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
 }
-#LogoAndCopyright {
-    height: calc(100% - 10px);
-    padding: 5px;
-    width: 210px;
-    float: left;
+.checkBtn {
+    margin: calc((var(--Header) - 31px) / 2) 0;
 }
-#LogoAndCopyright img {
-    height: 65%;
-}
-#LogoAndCopyright p {
-    margin-top: 0;
-    font-weight: 500;
+.checkBtn i {
+    font-size: 20px;
     color: var(--C3);
+}
+#check {
+    display: none;
+}
+#check:checked ~ #NavigationMenu {
+    right: -5px;
+}
+#NavigationMenu {
+    gap: 10px;
+    padding: 0px 25px;
+    background-color: var(--C1);
+    position: relative;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    margin-top: 7px;
+    flex-grow: 0;
+    transition: .3s;
+    right: calc(-100% - 17px);
+    border: solid 2px var(--C2);
+    border-top: none;
+    border-radius: 0px 0px 0px 5px;
+    color: var(--C3);
+}
+#NavigationMenu a {
+    color: var(--C3);
+    text-decoration: none;
+}
+#NavigationMenu a li {
+    border-bottom: 2px #32567a00 solid;
+    transition: .5s;
+    white-space: nowrap;
+    width: fit-content;
+}
+@media (max-width: 615px) {
+    .navigation {
+        display: none;
+    }
+    #MenuBtn {
+        display: flex;
+    }
+}
+#WDownload {
+    float: right;
+    margin: 0px 20px;
+    height: calc(var(--Header) - 10px);
+    display: flex;
+    align-items: center;
+    margin-top: calc(var(--Footer) - 60px);
+}
+#WDownload button {
+    height: 30px;
+    background-color: rgb(15, 115, 230);
+    color: white;
+    border: solid 2px rgb(10, 67, 133);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+}
+#WDownload button img {
+    height: 100%;
+    margin-right: 5px;
+}
+#WDownload button:hover {
+    box-shadow: 2px 2px rgb(10, 67, 133);
+    transform: translate(-2px, -2px);
+}
+#WDownload button:active {
+    box-shadow: none;
+    transform: translate(0);
 }
 /* =============== content =============== */
 #MainContainer {
     width: 100%;
-    min-height: calc(100vh - 174px);
-    margin-top: 72px;
+    min-height: calc(100vh - var(--Header) - var(--Footer) - 4px);
+    margin-top: calc(var(--Header) + 2px);
 }
 .content {
     padding: 20px;
@@ -106,7 +178,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 500px;
+    height: calc(100vh - var(--Header) - var(--Footer) + 36px);
     background-image: url("Images/background-og.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -129,4 +201,25 @@ body {
     min-width: 150px;
     max-width: 200px;
     width: 20vw;
+}
+/* =============== footer =============== */
+#footer {
+    background-color: var(--C1);
+    width: 100%;
+    height: var(--Footer);
+    border-top: 2px solid var(--C2);
+}
+#LogoAndCopyright {
+    height: calc(100% - 10px);
+    padding: 5px;
+    width: 210px;
+    float: left;
+}
+#LogoAndCopyright img {
+    height: 65%;
+}
+#LogoAndCopyright p {
+    margin-top: 0;
+    font-weight: 500;
+    color: var(--C3);
 }

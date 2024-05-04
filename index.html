@@ -7,6 +7,9 @@
     <!-- TITLE -->
     <title>How to play Kour.io</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
 
 </head>
 <body>
@@ -17,13 +20,31 @@
     <!-- Main page -->
     <div id="header">
         <div id="innerHeader">
-            <img src="Images/Kour-Logo.png" alt="Logo">
+            <!-- mettre agli altri html!!!! -->
+            <a href="https://kour.io/">
+                <img src="Images/Kour-Logo.png" alt="Logo">
+            </a>
+
             <ul class="navigation">
                 <a><li class="Pointer Active">Kour</li></a>
-                <a><li class="Pointer">How to play</li></a>
-                <a><li class="Pointer">Changelogs</li></a>
-                <a><li class="Pointer">Legion Team</li></a>
+                <a href="Pages/How To Play/index.html"><li class="Pointer">How to play</li></a>
+                <a href="Pages/Changelogs/index.html"><li class="Pointer">Changelogs</li></a>
+                <a href="Pages/LegionTeam/index.html"><li class="Pointer">Legion Team</li></a>
             </ul>
+
+            <div id="MenuBtn">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkBtn Pointer">
+                    <i class="fa fa-bars" onclick="ChangeIcon(this)"></i>
+                </label>
+                <ul id="NavigationMenu">
+                    <a><li class="Pointer Active">Kour</li></a>
+                    <a href="Pages/How To Play/index.html"><li class="Pointer">How to play</li></a>
+                    <a href="Pages/Changelogs/index.html"><li class="Pointer">Changelogs</li></a>
+                    <a href="Pages/LegionTeam/index.html"><li class="Pointer">Legion Team</li></a>
+                </ul>
+            </div>
+
         </div>
     </div>
 
@@ -46,10 +67,23 @@
     </div>
 
     <div id="footer">
+
         <div id="LogoAndCopyright">
-            <img src="Images/Kour-Logo.png" alt="Logo">
+            <!-- mettre agli altri html!!!! -->
+            <a href="https://kour.io/">
+                <img src="Images/Kour-Logo.png" alt="Logo">
+            </a>
             <p>© Copyright 2024 Kour.io</p>
         </div>
+
+        <!-- mettre agli altri html!!!! -->
+        <div id="WDownload">
+            <button class="Pointer" onclick="WDownload()">
+                <img src="Images/Windows logo.png" alt="Windows">
+                Download
+            </button>
+        </div>
+
     </div>
 
 </body>
