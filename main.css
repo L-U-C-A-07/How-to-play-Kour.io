@@ -1,0 +1,264 @@
+/* =============== general =============== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+canvas {
+    display: block;
+}
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    background-color: var(--C1);
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+    overflow-x: hidden;
+}
+:root {
+    --C1: #252525;
+    --C2: #101010;
+    --C3: #dfdfdf;
+    --Header: 70px;
+    --Footer: 100px;
+}
+.Pointer {
+    cursor: pointer;
+}
+/* =============== header =============== */
+#header {
+    background-color: var(--C1);
+    width: 100%;
+    height: var(--Header);
+    border-bottom: 2px solid var(--C2);
+    position: fixed;
+    z-index: 1;
+}
+#innerHeader {
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    padding: 5px;
+}
+#header img {
+    float: left;
+    height: 100%;
+}
+.navigation {
+    float: right;
+    display: flex;
+    height: 60px;
+    margin: 0;
+    align-items: center;
+    gap: 25px;
+}
+.navigation a {
+    font-size: 16px;
+    color: var(--C3);
+    text-decoration: none;
+}
+.navigation a:last-child {
+    padding-right: 10px;
+}
+.navigation a li {
+    display: table-cell;
+    white-space: nowrap;
+    border-bottom: 2px #10101000 solid;
+    transition: .5s;
+    height: 22px;
+    vertical-align: middle;
+}
+.navigation a li:hover, #NavigationMenu a li:hover {
+    border-color: var(--C2);
+}
+.navigation a li.Active, #NavigationMenu a li.Active {
+    border-color: var(--C2);
+}
+#MenuBtn {
+    width: 124.33px;
+    float: right;
+    height: 190px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+.checkBtn {
+    margin: calc((var(--Header) - 31px) / 2) 0;
+}
+.checkBtn i {
+    font-size: 20px;
+    color: var(--C3);
+}
+#check {
+    display: none;
+}
+#check:checked ~ #NavigationMenu {
+    right: -5px;
+}
+#NavigationMenu {
+    gap: 10px;
+    padding: 0px 25px;
+    background-color: var(--C1);
+    position: relative;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    margin-top: 7px;
+    flex-grow: 0;
+    transition: .3s;
+    right: calc(-100% - 17px);
+    border: solid 2px var(--C2);
+    border-top: none;
+    border-radius: 0px 0px 0px 5px;
+    color: var(--C3);
+}
+#NavigationMenu a {
+    color: var(--C3);
+    text-decoration: none;
+}
+#NavigationMenu a li {
+    border-bottom: 2px #32567a00 solid;
+    transition: .5s;
+    white-space: nowrap;
+    width: fit-content;
+}
+@media (max-width: 615px) {
+    .navigation {
+        display: none;
+    }
+    #MenuBtn {
+        display: flex;
+    }
+}
+/* =============== content =============== */
+#MainContainer {
+    width: 100%;
+    min-height: calc(100vh - var(--Header) - var(--Footer) - 4px);
+    margin-top: calc(var(--Header) + 2px);
+}
+.content {
+    padding: 20px;
+    width: calc(100% - 63px);
+    margin: 10px;
+    border: solid 2px var(--C2);
+    border-radius: 7px;
+    color: var(--C3);
+}
+/* =============== footer =============== */
+#footer {
+    background-color: var(--C1);
+    width: 100%;
+    height: var(--Footer);
+    border-top: 2px solid var(--C2);
+}
+#LogoAndCopyright {
+    height: calc(100% - 10px);
+    padding: 5px;
+    width: 150px;
+    float: left;
+}
+#LogoAndCopyright img {
+    height: 65%;
+}
+#LogoAndCopyright p {
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 500;
+    color: var(--C3);
+}
+.WDownload {
+    float: right;
+    margin: 0px 20px;
+    height: calc(var(--Header) - 10px);
+    display: flex;
+    align-items: center;
+    margin-top: calc(var(--Footer) - 60px);
+}
+.WDownload button {
+    height: 30px;
+    background-color: rgb(15, 115, 230);
+    color: white;
+    border: solid 2px rgb(10, 67, 133);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: .2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+.WDownload button img {
+    height: 100%;
+    margin-right: 5px;
+}
+.WDownload button:hover {
+    box-shadow: 2px 2px rgb(10, 67, 133);
+    transform: translate(-2px, -2px);
+}
+.WDownload button:active {
+    box-shadow: none;
+    transform: translate(0);
+}
+.BottomContacts {
+    float: left;
+    height: calc(100% - 20px);
+    margin: 10px 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.contact {
+    font-size: 25px;
+    color: var(--C3);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px 9px;
+    transition: .2s;
+}
+.contact:hover {
+    transform: scale(1.1);
+}
+.Download-Contacts {
+    display: none;
+    float: right;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px;
+}
+@media (max-width: 538px) {
+    .footerRemove {
+        display: none;
+    }
+    .Download-Contacts {
+        display: flex;
+    }
+    .BottomContacts {
+        grid-template-columns: auto auto auto auto auto;
+        height: auto;
+        margin: 0;
+    }
+    .contact {
+        font-size: 20px;
+        margin: 0 6px;
+    }
+    .WDownload {
+        margin: 0;
+        margin-top: 5px;
+        height: auto;
+        width: 100%;
+    }
+    .WDownload button {
+        width: 100%;
+    }
+}
+@media (max-width: 382px) {
+    .contact {
+        font-size: 17px;
+        margin: 0 4px;
+    }
+}
