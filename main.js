@@ -10,7 +10,7 @@ if (navigator.userAgent.match(/Android/i)
     || navigator.userAgent.match(/BlackBerry/i)
     || navigator.userAgent.match(/Windows Phone/i)) {
         console.log("MOBILE USER");
-        SetHeaderHeight("68px");
+        SetHeaderHeight("30px");
     }
 else {
     console.log("NON MOBILE USER");
