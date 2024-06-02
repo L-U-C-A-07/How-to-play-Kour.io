@@ -234,7 +234,7 @@ body {
     gap: 10px;
     padding: 0 20px;
 }
-@media (max-width: 538px) {
+@media (max-width: 568px) {
     .footerRemove {
         display: none;
     }
