@@ -154,7 +154,7 @@ body {
 #LogoAndCopyright {
     height: calc(100% - 10px);
     padding: 5px;
-    width: 190px;
+    width: 196px;
     float: left;
 }
 #LogoAndCopyright img {
@@ -234,7 +234,7 @@ body {
     gap: 10px;
     padding: 0 20px;
 }
-@media (max-width: 568px) {
+@media (max-width: 585px) {
     .footerRemove {
         display: none;
     }
@@ -260,9 +260,15 @@ body {
         width: 100%;
     }
 }
-@media (max-width: 382px) {
+@media (max-width: 428px) {
     .contact {
-        font-size: 17px;
+        font-size: 18px;
         margin: 0 4px;
+    }
+    .Download-Contacts {
+        margin-left: -183px;
+    }
+    #LogoAndCopyright p {
+        font-size: 10px;
     }
 }
