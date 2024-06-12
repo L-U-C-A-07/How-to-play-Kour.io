@@ -1,0 +1,22 @@
+.content-dropdown h1{
+    font-size: 25px;
+    margin: 13px 0px;
+}
+.arrow {
+    border: solid var(--C3);
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    float: right;
+    margin: 8.635px 0;
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.content-dropdown ul {
+    display: none;
+}

@@ -74,10 +74,10 @@ body {
 #MenuBtn {
     width: 124.33px;
     float: right;
-    height: 190px;
-    display: none;
+    height: 60px;
     align-items: center;
     flex-direction: column;
+    display: none;
 }
 .checkBtn {
     margin: calc((var(--Header) - 31px) / 2) 0;
@@ -137,12 +137,13 @@ body {
     margin-top: calc(var(--Header) + 2px);
 }
 .content {
-    padding: 20px;
+    padding: 0px 20px;
     width: calc(100% - 63px);
     margin: 10px;
     border: solid 2px var(--C2);
     border-radius: 7px;
     color: var(--C3);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.514);
 }
 /* =============== footer =============== */
 #footer {
