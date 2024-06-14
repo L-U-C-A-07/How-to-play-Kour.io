@@ -6,6 +6,7 @@
 
     <!-- TITLE -->
     <title>How to play</title>
+    <link rel="icon" type="image/x-icon" href="../../Images/favicon.ico">
     <link rel="stylesheet" href="../../main.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -48,10 +49,24 @@
 
     <div id="MainContainer">
         <div class="content" Id="a">
-            <h1>Something</h1>
+            <h1>Controls</h1>
+            <div id="a1">
+                <p>W - Move Forward<br>
+                    A - Move left<br>
+                    S - Move Backward<br>
+                    D - Move Right
+                </p>
+                <div>
+                    <div class="btn Pointer" id="W" onclick="focusBtn(this)">W</div>
+                    <div class="btn Pointer" id="A" onclick="focusBtn(this)">A</div>
+                    <div class="btn Pointer" id="S" onclick="focusBtn(this)">S</div>
+                    <div class="btn Pointer" id="D" onclick="focusBtn(this)">D</div>
+                </div>
+            </div>
+            <hr>
         </div>
         <div class="content" Id="b">
-            <h1>Something else</h1>
+            <h1>-</h1>
         </div>
     </div>
 

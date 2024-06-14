@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - var(--Header) - var(--Footer) + 36px);
+    height: calc(100vh - var(--Header) - 24px);
     background-image: url("Images/background-og.png");
     background-size: cover;
     background-repeat: no-repeat;

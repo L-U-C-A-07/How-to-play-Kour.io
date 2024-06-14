@@ -1,0 +1,38 @@
+#a1 {
+    display: grid;
+    grid-template-columns: auto 168px;
+}
+#a1 > div {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    border: solid 2px var(--C2);
+    border-radius: 5px;
+    width: 122px;
+    height: 78px;
+    box-shadow: 3px 3px 5px var(--C2);
+}
+#a1 > div > div {
+    height: 30px;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px var(--C2);
+    border-radius: 5px;
+    box-shadow: 1.5px 2px var(--C2);
+}
+#W {
+    grid-column: 2;
+}
+#A {
+    grid-column: 1;
+}
+#S {
+    grid-column: 2;
+}
+#D {
+    grid-column: 3;
+}

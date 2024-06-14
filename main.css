@@ -12,16 +12,26 @@ body {
     flex-direction: column;
     font-family: roboto;
     overflow-x: hidden;
+    transition: all .3s;
 }
 :root {
     --C1: #252525;
     --C2: #101010;
     --C3: #dfdfdf;
+    --C4: #fd8a2b;
     --Header: 70px;
     --Footer: 100px;
 }
 .Pointer {
     cursor: pointer;
+}
+.link {
+    color: var(--C4);
+    text-decoration-color: var(--C1);
+    transition: all .5s;
+}
+.link:hover {
+    text-decoration-color: var(--C4);
 }
 /* =============== header =============== */
 #header {
