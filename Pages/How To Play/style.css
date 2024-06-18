@@ -36,3 +36,6 @@
 #D {
     grid-column: 3;
 }
+#b ul li span, #b p span, #c ul li span {
+    font-weight: 800;
+}
