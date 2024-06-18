@@ -1,0 +1,13 @@
+#a1{
+    display: grid;
+    grid-template-columns: 55px auto;
+}
+#a1 div {
+    display: flex;
+    align-items: center;
+}
+.LegionLogo {
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
