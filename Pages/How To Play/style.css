@@ -41,7 +41,7 @@
 }
 .ModeImg {
     width: 100%;
-    max-width: 100%;
+    max-width: 500px;
     margin: 20px 0;
     border: solid 2px var(--C2);
     border-radius: 5px;

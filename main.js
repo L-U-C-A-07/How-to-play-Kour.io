@@ -1,7 +1,7 @@
 // GENERAL
 console.log("%cWebsite entirely created by luca33573 (Discord)", "letter-spacing:.5px; padding:10px; font-size:20px; font-family:sans-serif; font-weight:900; text-shadow: 2px 3px 5px rgba(0,0,0,0.5); border-bottom:solid 1px #101010;");
 const Copyrigh_and_version = document.getElementById("LogoAndCopyright").lastElementChild;
-Copyrigh_and_version.innerHTML = "© Copyright 2024 Kour.io <span>v 0.3.2</span>";
+Copyrigh_and_version.innerHTML = "© Copyright 2024 Kour.io <span>v 0.3.3</span>";
 
 //MOBILE
 if (navigator.userAgent.match(/Android/i)
