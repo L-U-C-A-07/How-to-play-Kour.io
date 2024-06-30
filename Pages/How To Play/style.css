@@ -39,3 +39,11 @@
 #b ul li span, #b p span, #c ul li span {
     font-weight: 800;
 }
+.ModeImg {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0;
+    border: solid 2px var(--C2);
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px var(--C2);
+}
